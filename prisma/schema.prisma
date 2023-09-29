@@ -28,6 +28,17 @@ model animais {
   descricao String 
   localizacao String 
   status String
-  createdAt DataTime @default(now())
-  updateAt DataTime @updateAt 
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt 
   }
+
+model chamados {
+  id Int @id @default(autoincrement())
+  id_solicitacao String
+  tipo_solicitacao String
+  descricao_solicitacao String
+  imagem_solicitacao String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt 
+
+ } 
